@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import * as Avatar from "@radix-ui/react-avatar";
+import { useUser } from "../hooks/useUser";
 
-const MenuItems = ({ username, name, city }) => {
+const MenuItems = () => {
   const [showLogoutMenu, setShowLogoutMenu] = useState(false);
-
+  let currentUser = localStorage.getItem("username");
+  const { username, city, name } = useUser(currentUser);
   return (
     <div
       role="button"

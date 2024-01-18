@@ -1,13 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../hooks/useUser";
 import MenuItems from "./MenuItems";
 
 const Navbar = () => {
   const navigate = useNavigate();
   let loggedin = localStorage.getItem("loggedin");
-  let currentUser = localStorage.getItem("username");
-  const userDetails = useUser(currentUser);
 
   return (
     <nav className="absolute top-0 flex justify-between w-full px-8 py-4 bg-black/40">
@@ -23,6 +20,7 @@ const Navbar = () => {
             className="px-4 py-2 bg-white border rounded-xl"
             onClick={() => {
               localStorage.setItem("loggedin", false);
+              localStorage.removeItem("username");
               navigate("/");
             }}
           >
@@ -40,7 +38,7 @@ const Navbar = () => {
         )}
 
         <button>theme</button>
-        {loggedin === "true" && <MenuItems {...userDetails} />}
+        {loggedin === "true" && <MenuItems />}
       </section>
     </nav>
   );
