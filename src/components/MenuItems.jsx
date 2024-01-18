@@ -27,15 +27,24 @@ const MenuItems = ({ username, name, city }) => {
       </Avatar.Root>
       {
         <ul
-          className={`absolute mt-2 text-black bg-white right-[2%] transition-opacity duration-500 ease-in ${
+          className={`absolute mt-6 text-black bg-white right-[2%] transition-opacity duration-500 rounded-md shadow-xl ease-in ${
             showLogoutMenu ? "opacity-100 visible " : "opacity-0 invisible"
           }  `}
         >
-          <li className="border-b px-4 pb-2 border-gray-300">
-            <button>Username:{username}</button>
+          <li className="px-4 py-2 border-b border-gray-300">
+            <button>
+              <span className="font-bold">Username: </span>
+              {username}
+            </button>
           </li>
-          <li className="border-b px-4 pb-2 border-gray-300">Name:{name}</li>
-          <li className="border-b px-4 pb-2 border-gray-300">City:{city}</li>
+          <li className="px-4 py-2 border-b border-gray-300">
+            <span className="font-bold">Name: </span>
+            {name}
+          </li>
+          <li className="px-4 py-2 border-b border-gray-300">
+            <span className="font-bold">City: </span>
+            {city}
+          </li>
         </ul>
       }
     </div>
