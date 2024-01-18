@@ -30,29 +30,31 @@ const LoginForm = () => {
   return (
     <form
       onSubmit={(e) => submitHandler(e)}
-      className="flex flex-col p-20 rounded-lg h-1/2 bg-slate-600"
+      className="flex flex-col justify-center px-20 rounded-lg pt-14 pb-28 bg-slate-600"
     >
-      <h1 className="text-3xl font-bold text-center text-white ">Login</h1>
+      <h1 className="text-5xl font-bold text-center text-white ">Login</h1>
       <label className="mt-4 text-xl font-semibold text-white">Username</label>
       <input
         id="username"
         type="text"
         name="username"
         required
-        className="rounded-md"
+        className="py-2 text-center rounded-md placeholder:p-4 focus:bg-purple-200 focus:outline-none"
         value={username}
         onChange={(e) => {
           setUserName(e.target.value);
         }}
+        placeholder="Enter username"
       />
       <label className="mt-4 text-xl font-semibold text-white">Password</label>
       <input
         type="password"
         name="password"
-        className="rounded-md"
+        className="py-2 text-center rounded-md placeholder:p-2 focus:bg-purple-200 focus:outline-none"
         required
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        placeholder="Enter password"
       />
       <input
         type="submit"

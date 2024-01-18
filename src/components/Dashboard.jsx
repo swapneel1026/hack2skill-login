@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import WeatherComponent from "./Weather";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -13,7 +14,11 @@ const Dashboard = () => {
     }
   }, [navigate]);
 
-  return <div>Weather Api</div>;
+  return (
+    <div>
+      <WeatherComponent />
+    </div>
+  );
 };
 
 export default Dashboard;
