@@ -15,9 +15,7 @@ const Dashboard = () => {
   }, [navigate]);
 
   return (
-    <div>
-      <WeatherComponent />
-    </div>
+    <>{localStorage.getItem("loggedin") !== "false" && <WeatherComponent />}</>
   );
 };
 
