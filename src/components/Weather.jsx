@@ -26,7 +26,7 @@ const WeatherComponent = () => {
       {apiresponse === null || apiresponse.error ? (
         <WeatherCardLoader />
       ) : (
-        <div className="px-20 py-8 bg-white rounded-lg shadow-2xl">
+        <div className="px-20 py-8 mx-10 bg-white rounded-lg shadow-2xl md:mx-0 ">
           <h1 className="mb-4 text-2xl font-bold">
             {apiresponse?.location.name},{apiresponse?.location.country}
           </h1>

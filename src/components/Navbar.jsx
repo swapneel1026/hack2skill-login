@@ -7,7 +7,7 @@ const Navbar = () => {
   let loggedin = localStorage.getItem("loggedin");
 
   return (
-    <nav className="absolute top-0 flex justify-between w-full px-8 py-4 bg-black/40">
+    <nav className="absolute top-0 left-0 flex items-center justify-between w-full gap-2 px-2 py-4 bg-black/40">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_65EDxELFlXkdai2jVSD_9UOt1Ewo6CpFUMKgeXR7yQ&s"
         alt="logo"

@@ -30,7 +30,7 @@ const LoginForm = () => {
   return (
     <form
       onSubmit={(e) => submitHandler(e)}
-      className="flex flex-col justify-center px-20 rounded-lg pt-14 pb-28 bg-slate-600"
+      className="flex flex-col justify-center px-10 mt-10 rounded-lg md:mt-2 md:px-20 pt-14 pb-28 bg-slate-600"
     >
       <h1 className="text-5xl font-bold text-center text-white ">Login</h1>
       <label className="mt-4 text-xl font-semibold text-white">Username</label>
