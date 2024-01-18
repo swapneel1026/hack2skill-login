@@ -8,7 +8,7 @@ const WeatherComponent = () => {
 
   const FetchWeatherData = async () => {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=25eb600efd9442b5abb135408241801&q=${city}&aqi=yes`
+      `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${city}&aqi=yes`
     );
     const dataRecived = await res.json();
     setApiResponse(dataRecived);
