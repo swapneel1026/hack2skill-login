@@ -19,7 +19,6 @@ const WeatherComponent = () => {
     FetchWeatherData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(apiresponse);
 
   return (
     <div className="flex items-center justify-center h-screen">
