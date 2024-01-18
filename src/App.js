@@ -1,13 +1,19 @@
-import './App.css';
-import LoginForm from './components/LoginForm';
-import {Outlet} from 'react-router-dom'
+import "./App.css";
+
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { Toaster} from 'sonner';
+
 
 function App() {
-  
   return (
-    <div className="bg-purple-500 h-screen flex items-center justify-center ">
-    <Outlet/>
+    <>
+      <Toaster dir="auto"  position="top-right" theme="system"/>
+    <div className="flex items-center justify-center h-screen bg-purple-500 ">
+      <Navbar />
+      <Outlet />
     </div>
+    </>
   );
 }
 

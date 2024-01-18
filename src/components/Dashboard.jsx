@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const navigate = useNavigate();
+
   useEffect(() => {
     if (
       localStorage.getItem("loggedin") === "false" ||
@@ -10,15 +11,9 @@ const Dashboard = () => {
     ) {
       navigate("/");
     }
-  }, []);
+  }, [navigate]);
 
-  return (
-    <div>
-      <button onClick={() => localStorage.setItem("loggedin", false)}>
-        Logout
-      </button>
-    </div>
-  );
+  return <div>Weather Api</div>;
 };
 
 export default Dashboard;
