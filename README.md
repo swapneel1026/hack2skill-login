@@ -1,13 +1,13 @@
-React App Template with Create React App and Tailwind CSS
-Overview
+##React App Template with Create React App and Tailwind CSS
+#Overview
 This React app template is built using Create React App (CRA) and styled with Tailwind CSS. It features a well-structured architecture, leverages various dependencies and libraries, and incorporates custom hooks for enhanced functionality.
 
-Tech Stack
+#Tech Stack
 Create React App (CRA): Used for creating a React app with a pre-configured setup.
 Tailwind CSS: Used for styling and creating a responsive design.
-Dependencies and Libraries
-Tailwind CSS Plugins:
 
+#Dependencies and Libraries
+Tailwind CSS Plugins:
 @heroicons/react: Icon library for UI components.
 @radix-ui/react-avatar: Provides avatar components.
 @radix-ui/react-switch: Offers switch components.
@@ -15,16 +15,17 @@ dotenv: Manages environment variables.
 react-router-dom: Enables navigation within the app.
 react-spinners: Implements spinners for loading states.
 sonner: A library for toasts or notifications.
-React Hooks:
 
+#React Hooks:
 useEffect: Used for side effects like data fetching.
 useState: Manages state in functional components.
 useContext: Facilitates state management via context.
-Custom Hooks:
 
+#Custom Hooks:
 useUserDetails: Fetches user details.
 useValidation: Custom hook for form validation.
-App Flow
+
+#App Flow
 Authentication
 User lands on the login component ("/").
 After successful authentication, the user is redirected to the dashboard.
