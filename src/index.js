@@ -5,6 +5,7 @@ import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import LoginForm from './components/LoginForm';
+import GuestDashboard from './components/GuestDashboard';
 
 const router=createBrowserRouter([
   {
@@ -19,9 +20,13 @@ const router=createBrowserRouter([
       {
   path:"dashboard",
   element:<Dashboard/>  
-      }
+      },
+      
+   {path:"/guestlogin",
+   element:<GuestDashboard/>},
     ]
-   }
+   },
+   
   
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,9 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import MenuItems from "./MenuItems";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   let loggedin = localStorage.getItem("loggedin");
 
   return (
@@ -30,7 +32,9 @@ const Navbar = () => {
           <button
             className="px-4 py-2 bg-white border rounded-xl"
             onClick={() => {
-              document.getElementById("username").focus();
+              pathname.includes("/guestlogin")
+                ? navigate("/")
+                : document.getElementById("username").focus();
             }}
           >
             Login
