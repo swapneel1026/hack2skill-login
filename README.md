@@ -1,5 +1,5 @@
-##React App Template with Create React App and Tailwind CSS
-#Overview
+# React App Template with Create React App and Tailwind CSS
+## Overview
 This React app template is built using Create React App (CRA) and styled with Tailwind CSS. It features a well-structured architecture, leverages various dependencies and libraries, and incorporates custom hooks for enhanced functionality.
 
 #Tech Stack
