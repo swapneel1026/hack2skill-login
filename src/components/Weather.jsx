@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useUser } from "../hooks/useUser";
 import WeatherCardLoader from "./Loaders/WeatherCardLoader";
 import { useLocation } from "react-router-dom";
+import ThemeContext from "../context/themContext";
 
 const WeatherComponent = () => {
   const [apiresponse, setApiResponse] = useState(null);
@@ -9,6 +10,7 @@ const WeatherComponent = () => {
   let currentUser = localStorage.getItem("username");
   const { city } = useUser(currentUser);
   const { pathname } = useLocation();
+  const theme = useContext(ThemeContext);
 
   async function getLocation() {
     return new Promise((resolve, reject) => {
@@ -63,7 +65,7 @@ const WeatherComponent = () => {
 
   if (pathname === "/guestlogin" && errorMessage !== null)
     return (
-      <h1 className="text-white font-semibold text-2xl bg-purple-800 p-2 rounded-md">
+      <h1 className="p-2 text-2xl font-semibold text-white bg-purple-800 rounded-md">
         {errorMessage}
       </h1>
     );
@@ -75,20 +77,35 @@ const WeatherComponent = () => {
           <WeatherCardLoader />
         ) : (
           <div className="px-20 py-8 mx-10 bg-white rounded-lg shadow-2xl md:mx-0 ">
-            <h1 className="mb-4 text-2xl font-bold">
+            <h1
+              className={`mb-4 text-2xl font-bold
+            ${theme === "dark" ? " text-[#0047AB]/[80%]" : "text-black"}`}
+            >
               {apiresponse?.location.name},{apiresponse?.location.country}
             </h1>
-            <div className="mb-2 text-4xl font-bold">
+            <div
+              className={`mb-2 text-4xl font-bold  ${
+                theme === "dark" ? " text-[#0047AB]/[80%]" : "text-black"
+              } `}
+            >
               {apiresponse?.current.temp_c}°C
             </div>
-            <div className="flex items-center gap-3 mb-4 text-lg font-semibold text-gray-600">
+            <div
+              className={`flex items-center gap-3 mb-4 text-lg font-semibold text-gray-600  ${
+                theme === "dark" ? " text-[#0047AB]/[80%]" : "text-black"
+              }`}
+            >
               {apiresponse?.current.condition.text}
               <img
                 src={apiresponse?.current.condition.icon}
                 alt="weathericon"
               />
             </div>
-            <div className="text-gray-700">
+            <div
+              className={` ${
+                theme === "dark" ? " text-[#0047AB]/[70%]" : "text-gray-500"
+              }`}
+            >
               <p>Humidity: {apiresponse?.current.humidity}%</p>
               <p>Wind Speed: {apiresponse?.current.wind_kph} km/h</p>
             </div>
