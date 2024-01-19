@@ -19,7 +19,7 @@ const Navbar = () => {
       <section className="flex gap-10">
         {loggedin === "true" || null ? (
           <button
-            className="px-4 py-2 bg-white border rounded-xl"
+            className="px-4 py-2 bg-[#0047AB] text-white shadow-sm shadow-white rounded-xl"
             onClick={() => {
               localStorage.setItem("loggedin", false);
               localStorage.removeItem("username");
@@ -30,7 +30,7 @@ const Navbar = () => {
           </button>
         ) : (
           <button
-            className="px-4 py-2 bg-white border rounded-xl"
+            className="px-4 py-2 bg-[#0047AB] text-white shadow-sm shadow-white rounded-xl"
             onClick={() => {
               pathname.includes("/guestlogin")
                 ? navigate("/")
