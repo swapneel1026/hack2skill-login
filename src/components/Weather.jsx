@@ -65,7 +65,13 @@ const WeatherComponent = () => {
 
   if (pathname === "/guestlogin" && errorMessage !== null)
     return (
-      <h1 className="p-2 text-2xl font-semibold text-white bg-purple-800 rounded-md">
+      <h1
+        className={`p-2 text-2xl font-semibold   ${
+          theme === "dark"
+            ? " text-[#0047AB]/[80%] bg-white"
+            : "text-white bg-black"
+        } rounded-md`}
+      >
         {errorMessage}
       </h1>
     );
