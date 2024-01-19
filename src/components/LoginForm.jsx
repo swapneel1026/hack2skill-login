@@ -35,7 +35,7 @@ const LoginForm = () => {
     <>
       <form
         onSubmit={(e) => submitHandler(e)}
-        className="flex flex-col justify-center px-10 mt-10 rounded-lg bg-white/90 md:mt-2 md:px-20 pt-14 pb-28"
+        className="flex flex-col justify-center px-10 mt-10 rounded-lg shadow-xl shadow-black bg-white/90 md:mt-2 md:px-20 pt-14 pb-28"
       >
         <h1
           className={`text-5xl font-bold text-center ${
